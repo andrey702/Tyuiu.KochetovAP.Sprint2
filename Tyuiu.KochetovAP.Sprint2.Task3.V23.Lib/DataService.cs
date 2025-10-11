@@ -29,7 +29,8 @@ namespace Tyuiu.KochetovAP.Sprint2.Task3.V23.Lib
                 throw new ArgumentException("Неверное значение X");
             }
 
-            return y;
+            // Правильное округление до 3 знаков после запятой
+            return Math.Round(y, 3, MidpointRounding.AwayFromZero);
         }
     }
 }
