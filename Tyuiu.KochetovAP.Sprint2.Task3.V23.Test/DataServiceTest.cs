@@ -1,20 +1,64 @@
-﻿using Tyuiu.KochetovAP.Sprint2.Task3.V23.Lib;
+﻿
+using Tyuiu.KochetovAP.Sprint2.Task3.V23.Lib;
 
 namespace Tyuiu.KochetovAP.Sprint2.Task3.V23.Test
 {
     [TestClass]
-    public sealed class DataServiceTest
+    public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculate1()
         {
-            DataService service = new DataService();
-            Assert.AreEqual(Math.Round(service.Calculate(5), 3), 37.969);
-            Assert.AreEqual(Math.Round(service.Calculate(2), 3), 18.000);
-            Assert.AreEqual(Math.Round(service.Calculate(1), 3), 4.000);
-            Assert.AreEqual(Math.Round(service.Calculate(0), 3), -16.000);
-            Assert.AreEqual(Math.Round(service.Calculate(-27), 3), -297.001);
+            DataService ds = new DataService();
+            double x = 5;
+            double wait = 37.969;
+            double res = ds.Calculate(x);
+            res = System.Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
 
+        [TestMethod]
+        public void ValidCalculate2()
+        {
+            DataService ds = new DataService();
+            double x = 2;
+            double wait = 18.000;
+            double res = ds.Calculate(x);
+            res = System.Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculate3()
+        {
+            DataService ds = new DataService();
+            double x = 1;
+            double wait = 4.000;
+            double res = ds.Calculate(x);
+            res = System.Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculate4()
+        {
+            DataService ds = new DataService();
+            double x = 0;
+            double wait = -16.000;
+            double res = ds.Calculate(x);
+            res = System.Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
+        }
+
+        [TestMethod]
+        public void ValidCalculate5()
+        {
+            DataService ds = new DataService();
+            double x = -27;
+            double wait = -297.001;
+            double res = ds.Calculate(x);
+            res = System.Math.Round(res, 3);
+            Assert.AreEqual(wait, res);
         }
     }
 }
