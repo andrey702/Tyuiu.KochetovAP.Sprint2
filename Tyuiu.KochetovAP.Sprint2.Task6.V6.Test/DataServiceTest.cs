@@ -11,7 +11,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V6.Test
             DataService service = new DataService();
             int suit = 1;
             int rank = 12;
-            string wait = "Дама пик";
+            string wait = "дама пик";
             string result = service.FindCardNameAndValue(suit, rank);
 
             Assert.AreEqual(wait, result);
@@ -24,7 +24,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V6.Test
 
             int suit = 3;
             int rank = 6;
-            string wait = "Шестерка бубен";
+            string wait = "шестерка бубен";
             string result = service.FindCardNameAndValue(suit, rank);
 
             Assert.AreEqual(wait, result);
@@ -37,7 +37,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V6.Test
 
             int suit = 4;
             int rank = 14;
-            string wait = "Туз червей";
+            string wait = "туз червей";
             string result = service.FindCardNameAndValue(suit, rank);
 
             Assert.AreEqual(wait, result);
@@ -50,7 +50,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V6.Test
 
             int suit = 2;
             int rank = 11;
-            string wait = "Валет треф";
+            string wait = "валет треф";
             string result = service.FindCardNameAndValue(suit, rank);
 
             Assert.AreEqual(wait, result);
