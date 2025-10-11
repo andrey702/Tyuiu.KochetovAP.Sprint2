@@ -9,7 +9,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V15.Test
         {
             DataService ds = new DataService();
             string result = ds.FindDayName(1);
-            Assert.AreEqual("понедельник", result);
+            Assert.AreEqual("Понедельник", result);
         }
 
         [TestMethod]
@@ -17,7 +17,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V15.Test
         {
             DataService ds = new DataService();
             string result = ds.FindDayName(7);
-            Assert.AreEqual("воскресенье", result);
+            Assert.AreEqual("Воскресенье", result);
         }
 
         [TestMethod]
@@ -25,7 +25,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task6.V15.Test
         {
             DataService ds = new DataService();
             string result = ds.FindDayName(365);
-            Assert.AreEqual("понедельник", result);
+            Assert.AreEqual("Понедельник", result);
         }
 
         [TestMethod]
