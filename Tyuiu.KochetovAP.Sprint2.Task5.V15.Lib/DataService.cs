@@ -7,10 +7,9 @@ namespace Tyuiu.KochetovAP.Sprint2.Task5.V15.Lib
         public string FindDayName(int k)
         {
             if (k < 1 || k > 365)
-                throw new ArgumentOutOfRangeException(nameof(k), "Число должно быть от 1 до 365.");
+                throw new ArgumentException("День должен быть в диапазоне от 1 до 365");
 
-
-            int dayOfWeek = (k + 6) % 7;
+            int dayOfWeek = (k - 1) % 7;
 
             switch (dayOfWeek)
             {
@@ -21,7 +20,7 @@ namespace Tyuiu.KochetovAP.Sprint2.Task5.V15.Lib
                 case 4: return "пятница";
                 case 5: return "суббота";
                 case 6: return "воскресенье";
-                default: return "неизвестно";
+                default: return "ошибка";
             }
         }
     }
